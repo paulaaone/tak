@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaproś na Walentynki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #ff4081;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #yesButton {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        #noButton {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #yesButton:hover, #noButton:hover {
+            transform: scale(1.1);
+        }
+
+        #heart {
+            display: none;
+            font-size: 48px;
+            color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Czy zostaniesz moją walentynką?</h1>
+
+    <button id="yesButton" onclick="showHeart()">Tak</button>
+    <button id="noButton" onclick="enlargeNoButton()">Nie</button>
+
+    <div id="heart">❤️</div>
+
+    <script>
+        function showHeart() {
+            document.getElementById('heart').style.display = 'block';
+            document.getElementById('yesButton').disabled = true;
+            document.getElementById('noButton').disabled = true;
+        }
+
+        function enlargeNoButton() {
+            document.getElementById('noButton').style.transform = 'scale(1.2)';
+        }
+    </script>
+
+</body>
+</html>
